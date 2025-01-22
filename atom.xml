@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://luxuuuuuuuu.github.io</id>
+    <title></title>
+    <updated>2025-01-22T04:27:40.102Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://luxuuuuuuuu.github.io"/>
+    <link rel="self" href="https://luxuuuuuuuu.github.io/atom.xml"/>
+    <subtitle> 这世间所有的相遇，都是久别重逢</subtitle>
+    <logo>https://luxuuuuuuuu.github.io/images/avatar.png</logo>
+    <icon>https://luxuuuuuuuu.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2025, </rights>
+</feed>
