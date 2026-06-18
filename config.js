@@ -15,7 +15,7 @@ window.SITE_CONFIG = {
   },
 
   /* ---------------------------------------------------------------
-   *  背景图片
+   *  背123景图片
    *  - image 留空 ("") 则使用默认的渐变背景
    *  - 路径用正斜杠 "/"，例如 assets/background.jpg（不要用反斜杠 \）
    *  - overlay 是蒙版浓度：0 = 完全显示原图，1 = 完全被纸色盖住
@@ -27,7 +27,7 @@ window.SITE_CONFIG = {
     overlay: 0.72,
     fixed: true,
   },
-
+ 
   /* 首屏 Hero 区 */
   hero: {
     eyebrow: "Personal Homepage / Blog",

@@ -51,7 +51,7 @@ cover:
 
 **加粗**、*斜体*、\`行内代码\`，以及插入图片：
 
-![图片描述](../assets/your-image.jpg)
+![图片描述](assets/your-image.jpg)
 EOF
 
 # 把新文件登记进 posts.json（插到数组开头）—— 优先用 node，没有则用 python
