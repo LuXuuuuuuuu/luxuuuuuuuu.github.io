@@ -6,7 +6,7 @@
     <title>Luxu | Personal Site</title>
     <meta
       name="description"
-      content="Luxu 的个人主页与博客，记录项目、随笔和持续学习。"
+      content="Luxu 的个人主页与博客，记录随笔和持续学习。"
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
@@ -18,9 +18,7 @@
           <span class="brand-text" id="brand-text">Luxu Notes</span>
         </a>
         <nav class="site-nav" aria-label="主导航">
-          <a href="#about">关于</a>
           <a href="#writing">博客</a>
-          <a href="#projects">项目</a>
           <a href="#contact">联系</a>
           <button
             class="theme-toggle"
@@ -37,9 +35,9 @@
         <section class="hero reveal">
           <div class="hero-copy">
             <p class="eyebrow" id="hero-eyebrow">Personal Homepage / Blog</p>
-            <h1 id="hero-heading">把项目、思考和成长轨迹放在同一个地方。</h1>
+            <h1 id="hero-heading">把思考和成长轨迹放在同一个地方。</h1>
             <p class="hero-text" id="hero-text">
-              这是 Luxu 的个人站点。记录项目、随笔与持续学习。
+              这是 Luxu 的个人站点。记录随笔与持续学习。
             </p>
             <div class="hero-actions">
               <a class="button button-primary" id="hero-primary" href="#writing"
@@ -48,8 +46,8 @@
               <a
                 class="button button-secondary"
                 id="hero-secondary"
-                href="#projects"
-                >查看项目</a
+                href="#contact"
+                >联系我</a
               >
             </div>
           </div>
@@ -65,21 +63,13 @@
             <span class="metric-label">文章</span>
           </article>
           <article>
-            <span class="metric-value" id="project-count">0</span>
-            <span class="metric-label">展示项目</span>
+            <span class="metric-value" id="busuanzi_value_site_pv">…</span>
+            <span class="metric-label">总访问量</span>
           </article>
           <article>
-            <span class="metric-value">100%</span>
-            <span class="metric-label">GitHub Pages 兼容</span>
+            <span class="metric-value" id="busuanzi_value_site_uv">…</span>
+            <span class="metric-label">访客数</span>
           </article>
-        </section>
-
-        <section class="section reveal" id="about">
-          <div class="section-heading">
-            <p class="eyebrow">About</p>
-            <h2>关于我</h2>
-          </div>
-          <div class="about-grid" id="about-grid"></div>
         </section>
 
         <section class="section reveal" id="writing">
@@ -91,6 +81,16 @@
             <div class="tag-filter" id="tag-filter" aria-label="文章标签过滤"></div>
           </div>
 
+          <div class="writing-toolbar">
+            <input
+              id="search-input"
+              class="search-input"
+              type="search"
+              placeholder="搜索文章（标题 / 摘要 / 标签 / 正文）…"
+              aria-label="搜索文章"
+            />
+          </div>
+
           <div class="featured-post card" id="featured-post"></div>
           <div class="post-grid" id="post-list"></div>
         </section>
@@ -98,14 +98,7 @@
         <section class="section post-detail hidden" id="post-detail-section">
           <a class="back-link" href="#writing">← 返回文章列表</a>
           <article class="post-article card" id="post-detail"></article>
-        </section>
-
-        <section class="section reveal" id="projects">
-          <div class="section-heading">
-            <p class="eyebrow">Projects</p>
-            <h2>项目</h2>
-          </div>
-          <div class="project-grid" id="project-list"></div>
+          <section class="comments" id="comments" aria-label="评论"></section>
         </section>
 
         <section class="section reveal" id="contact">
