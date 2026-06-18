@@ -4,7 +4,7 @@
  * ===================================================================== */
 window.SITE_CONFIG = {
   /* 浏览器标签页标题 */
-  title: "Luxu | 个人主页与博客",
+  title: "LuxLog",
 
   /* 左上角品牌标识 */
   brand: {
@@ -21,7 +21,7 @@ window.SITE_CONFIG = {
    *  - fixed 为 true 时背景固定不随滚动移动
    * --------------------------------------------------------------- */
   background: {
-    image: "", // 例如："assets/background.jpg"
+    image: "assets/IMG_20260605_183710.jpg", // 例如："assets/background.jpg"
     overlay: 0.72,
     fixed: true,
   },
@@ -29,8 +29,8 @@ window.SITE_CONFIG = {
   /* 首屏 Hero 区 */
   hero: {
     eyebrow: "Personal Homepage / Blog",
-    heading: "把项目、思考和成长轨迹放在同一个地方。",
-    text: "这是 Luxu 的个人站点。记录项目、随笔与持续学习，作为公开的工作台。",
+    heading: "Welcome to LuxLog",
+    text: "这是 Luxu 的webset，分享一些有趣的东西",
     primaryText: "开始阅读",
     primaryHref: "#writing",
     secondaryText: "查看项目",
@@ -47,25 +47,18 @@ window.SITE_CONFIG = {
   /* 关于我（卡片，可增删） */
   about: [
     {
-      title: "身份",
-      text: "南京大学在读，关注软件工程与系统方向。这里换成你的简介。",
+      title: "状态",
+      text: "NJUSE 23级 考研ing",
     },
-    {
-      title: "关注",
-      text: "长期关注的问题，例如软件工程、AI 应用、编译原理、产品设计。",
-    },
-    {
-      title: "写作目的",
-      text: "记录实践、沉淀方法、公开作品。让博客成为公开的工作台。",
-    },
+    
+    
   ],
 
   /* 项目展示（卡片，可增删） */
   projects: [
     {
-      name: "Course Lab Notes",
-      description:
-        "把课程实验中的关键实现、错误案例和调试经验整理成系列笔记，方便回顾和展示。",
+      name: "Technical Notes",
+      
       stack: "Markdown / Static Site / GitHub Pages",
       links: ["文档归档", "持续更新"],
       href: "", // 可填项目链接，留空则不可点击
@@ -90,16 +83,16 @@ window.SITE_CONFIG = {
 
   /* 联系方式（label + href，可增删） */
   contact: {
-    intro: "把下面的链接换成你真实的地址，例如 GitHub、邮箱、Bilibili、X 或简历。",
+    
     links: [
       { label: "GitHub", href: "https://github.com/LuXuuuuuuuu" },
-      { label: "Email", href: "mailto:hello@example.com" },
-      { label: "Resume", href: "#" },
+      { label: "Email", href: "mailto:231250073@smail.nju.edu.cn" },
+      { label: "知乎", href: "https://www.zhihu.com/people/abc-46-6-42" },
     ],
   },
 
   /* 页脚 */
   footer: {
-    text: "Luxu Notes",
+    text: "LuxLog",
   },
 };
