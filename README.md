@@ -1,28 +1,12 @@
 # luxuuuuuuuu.github.io
 
-Luxu 的个人主页与博客 —— 纯静态、零依赖、零构建，直接部署在 GitHub Pages。
 
-线上地址： https://luxuuuuuuuu.github.io
+
+地址： https://luxuuuuuuuu.github.io
 
 ---
 
-## 目录结构
 
-```
-.
-├── index.html        页面骨架（一般不用动）
-├── styles.css        样式（深/浅色主题都在这里）
-├── main.js           渲染逻辑 + 内置 Markdown 解析（一般不用动）
-├── config.js         ⭐ 站点配置：标题、简介、背景图、项目、联系方式
-├── posts/
-│   ├── posts.json    ⭐ 文章清单（哪些 .md 会显示）
-│   └── *.md          ⭐ 每篇文章一个 Markdown 文件
-├── assets/           图片目录（背景图、封面、插图）
-├── new-post.sh       新建文章脚本
-└── publish.sh        一键提交并推送
-```
-
-带 ⭐ 的是日常需要改的文件。
 
 ---
 

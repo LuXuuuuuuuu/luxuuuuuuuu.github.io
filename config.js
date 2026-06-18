@@ -23,7 +23,7 @@ window.SITE_CONFIG = {
    *  - fixed 为 true 时背景固定不随滚动移动
    * --------------------------------------------------------------- */
   background: {
-    image: "assets/IMG_20260605_183710.jpg",
+    image: "assets/page.jpg",
     overlay: 0.72,
     fixed: true,
   },
