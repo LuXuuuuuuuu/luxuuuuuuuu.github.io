@@ -30,7 +30,7 @@ window.SITE_CONFIG = {
   hero: {
     eyebrow: "Personal Homepage / Blog",
     heading: "Welcome to LuxLog",
-    text: "这是 Luxu 的webset，分享一些有趣的东西",
+    text: "这是 Luxu 的个人主页，分享一些有趣的东西",
     primaryText: "开始阅读",
     primaryHref: "#writing",
     secondaryText: "查看项目",
