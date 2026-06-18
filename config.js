@@ -56,18 +56,20 @@ window.SITE_CONFIG = {
 
   /* ---------------------------------------------------------------
    *  评论（giscus，基于 GitHub Discussions）
-   *  开启步骤（一次性）：
-   *    1. 确保本仓库是 Public，并在仓库 Settings → General → Features 勾选 Discussions
-   *    2. 打开 https://github.com/apps/giscus 安装到本仓库
-   *    3. 打开 https://giscus.app ，在“仓库”填 LuXuuuuuuuu/luxuuuuuuuu.github.io
-   *       页面会生成 repo-id 和 category-id，把它们填到下面，并把 enabled 改成 true
+   *  还差 categoryId 才能真正生效，按下面三步操作（一次性，约 3 分钟）：
+   *    1. 开启讨论区：仓库 Settings → General → Features → 勾选 Discussions
+   *    2. 安装应用：打开 https://github.com/apps/giscus → Install → 选择本仓库
+   *    3. 取 categoryId：打开 https://giscus.app ，“仓库”填
+   *       LuXuuuuuuuu/luxuuuuuuuu.github.io ，“Discussion 分类”选 Announcements，
+   *       页面下方生成的代码里有 data-category-id="..."，把引号里的值粘到下面 categoryId
+   *  （repoId 我已帮你填好；填完 categoryId 保存刷新即可看到评论框）
    * --------------------------------------------------------------- */
   comments: {
-    enabled: false,
+    enabled: true,
     repo: "LuXuuuuuuuu/luxuuuuuuuu.github.io",
-    repoId: "",           // giscus.app 生成的 data-repo-id
+    repoId: "R_kgDONWCXgg",
     category: "Announcements",
-    categoryId: "",       // giscus.app 生成的 data-category-id
+    categoryId: "DIC_kwDONWCXgs4C_ade",
     lang: "zh-CN",
   },
 
