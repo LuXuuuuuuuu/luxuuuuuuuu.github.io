@@ -6,12 +6,12 @@
  * ===================================================================== */
 window.SITE_CONFIG = {
   /* 浏览器标签页标题 */
-  title: "LuxLog",
+  title: "Lux Log",
 
   /* 左上角品牌标识 */
   brand: {
-    mark: "LX", // 圆形图标里的文字
-    text: "Luxu Notes", // 站点名称
+    mark: "Lux", // 图标里的文字
+    text: "Lux Log", // 站点名称
   },
 
   /* ---------------------------------------------------------------
@@ -32,7 +32,7 @@ window.SITE_CONFIG = {
   hero: {
     eyebrow: "Personal Homepage / Blog",
     heading: "Welcome to LuxLog",
-    text: "这是 Luxu 的个人主页，分享一些有趣的东西",
+    text: "这是 Luxu 的个人主页，分享一些有趣的东西。我的邮箱：231250073@smail.nju.edu.cn，欢迎大家交流想法。",
     primaryText: "开始阅读",
     primaryHref: "#writing",
     secondaryText: "联系我",
@@ -41,18 +41,16 @@ window.SITE_CONFIG = {
 
   /* 右侧 “Now” 面板，想写几条写几条 */
   now: [
-    "NJUSE 23 级，考研 ing",
-    "站点形式：纯静态，无依赖，可直接部署",
-    "更新方式：新建一个 Markdown 文件即可发布文章",
+    "分享一些生活趣事和 cs 知识",
   ],
 
-  /* 联系方式（label + href，可增删） */
+  /* 联系方式（label + href + icon，可增删；icon 可选 github / email / zhihu） */
   contact: {
     intro: "欢迎通过下面任意方式找到我。",
     links: [
-      { label: "GitHub", href: "https://github.com/LuXuuuuuuuu" },
-      { label: "Email", href: "mailto:231250073@smail.nju.edu.cn" },
-      { label: "知乎", href: "https://www.zhihu.com/people/abc-46-6-42" },
+      { label: "Email", href: "mailto:231250073@smail.nju.edu.cn", icon: "email" },
+      { label: "GitHub", href: "https://github.com/LuXuuuuuuuu", icon: "github" },
+      { label: "知乎", href: "https://www.zhihu.com/people/abc-46-6-42", image: "assets/zhihu.jpg" },
     ],
   },
 
@@ -87,6 +85,6 @@ window.SITE_CONFIG = {
 
   /* 页脚 */
   footer: {
-    text: "LuxLog",
+    text: "Lux Log",
   },
 };
