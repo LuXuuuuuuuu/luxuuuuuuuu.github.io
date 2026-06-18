@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,46 +13,56 @@
   <body>
     <div class="page-shell">
       <header class="site-header">
-        <a class="brand" href="#top" aria-label="Luxu 首页">
-          <span class="brand-mark">LX</span>
-          <span class="brand-text">Luxu Notes</span>
+        <a class="brand" href="#top" aria-label="首页">
+          <span class="brand-mark" id="brand-mark">LX</span>
+          <span class="brand-text" id="brand-text">Luxu Notes</span>
         </a>
         <nav class="site-nav" aria-label="主导航">
           <a href="#about">关于</a>
           <a href="#writing">博客</a>
           <a href="#projects">项目</a>
           <a href="#contact">联系</a>
+          <button
+            class="theme-toggle"
+            id="theme-toggle"
+            type="button"
+            aria-label="切换深浅色"
+          >
+            ☾
+          </button>
         </nav>
       </header>
 
       <main id="top">
         <section class="hero reveal">
           <div class="hero-copy">
-            <p class="eyebrow">Personal Homepage / Blog</p>
-            <h1>把项目、思考和成长轨迹放在同一个地方。</h1>
-            <p class="hero-text">
-              这是 Luxu 的个人站点模板。你可以把它作为 GitHub Pages
-              首页，也可以继续扩展成长期写作博客。
+            <p class="eyebrow" id="hero-eyebrow">Personal Homepage / Blog</p>
+            <h1 id="hero-heading">把项目、思考和成长轨迹放在同一个地方。</h1>
+            <p class="hero-text" id="hero-text">
+              这是 Luxu 的个人站点。记录项目、随笔与持续学习。
             </p>
             <div class="hero-actions">
-              <a class="button button-primary" href="#writing">开始阅读</a>
-              <a class="button button-secondary" href="#projects">查看项目</a>
+              <a class="button button-primary" id="hero-primary" href="#writing"
+                >开始阅读</a
+              >
+              <a
+                class="button button-secondary"
+                id="hero-secondary"
+                href="#projects"
+                >查看项目</a
+              >
             </div>
           </div>
           <aside class="hero-panel reveal delay-1">
             <p class="panel-label">Now</p>
-            <ul class="status-list">
-              <li>专注方向：前端、系统课程、个人写作</li>
-              <li>站点形式：纯静态，无依赖，可直接部署</li>
-              <li>下一步：替换为你的真实简介、项目和文章</li>
-            </ul>
+            <ul class="status-list" id="now-list"></ul>
           </aside>
         </section>
 
         <section class="metrics reveal delay-2" aria-label="站点概览">
           <article>
             <span class="metric-value" id="post-count">0</span>
-            <span class="metric-label">示例文章</span>
+            <span class="metric-label">文章</span>
           </article>
           <article>
             <span class="metric-value" id="project-count">0</span>
@@ -69,27 +79,7 @@
             <p class="eyebrow">About</p>
             <h2>关于我</h2>
           </div>
-          <div class="about-grid">
-            <article class="card">
-              <h3>身份</h3>
-              <p>
-                这里可以放你的学校、专业、岗位方向，或者一句简洁的个人介绍。
-              </p>
-            </article>
-            <article class="card">
-              <h3>关注</h3>
-              <p>
-                可以写你长期关注的问题，例如软件工程、AI
-                应用、编译原理、产品设计。
-              </p>
-            </article>
-            <article class="card">
-              <h3>写作目的</h3>
-              <p>
-                记录实践、沉淀方法、公开作品。让博客不只是“发文章”，而是你的公开工作台。
-              </p>
-            </article>
-          </div>
+          <div class="about-grid" id="about-grid"></div>
         </section>
 
         <section class="section reveal" id="writing">
@@ -124,27 +114,23 @@
             <h2>联系</h2>
           </div>
           <div class="contact-card card">
-            <p>
-              你可以把下面的占位信息换成真实链接，例如 GitHub、邮箱、Bilibili、
-              X 或简历地址。
-            </p>
-            <div class="contact-links">
-              <a href="https://github.com/luxuuuuuuuu" target="_blank" rel="noreferrer"
-                >GitHub</a
-              >
-              <a href="mailto:hello@example.com">Email</a>
-              <a href="#">Resume</a>
-            </div>
+            <p id="contact-intro"></p>
+            <div class="contact-links" id="contact-links"></div>
           </div>
         </section>
       </main>
 
       <footer class="site-footer">
-        <p>© <span id="current-year"></span> Luxu Notes</p>
-        <p>Built for `luxuuuuuuuu.github.io`.</p>
+        <p>© <span id="current-year"></span> <span id="footer-text">Luxu Notes</span></p>
+        <p>Built for <code>luxuuuuuuuu.github.io</code>.</p>
       </footer>
     </div>
 
+    <button class="back-to-top" id="back-to-top" type="button" aria-label="回到顶部">
+      ↑
+    </button>
+
+    <script src="./config.js"></script>
     <script src="./main.js"></script>
   </body>
 </html>
