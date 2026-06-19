@@ -41,7 +41,7 @@ window.SITE_CONFIG = {
 
   /* 右侧 “Now” 面板，想写几条写几条 */
   now: [
-    "分享一些生活趣事和 cs 知识",
+    "分享一些生活趣事"
   ],
 
   /* 联系方式（label + href + icon，可增删；icon 可选 github / email / zhihu） */
