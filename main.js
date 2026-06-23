@@ -442,6 +442,7 @@ function showView(view) {
     section.classList.toggle("active", section.dataset.view === view);
   });
   dom.postDetailSection.classList.add("hidden");
+  dom.postDetailSection.classList.remove("active");
   state.lastView = view;
   setActiveNav(view);
 }
@@ -471,6 +472,7 @@ function renderPostDetailByHash() {
 
   dom.views.forEach((section) => section.classList.remove("active"));
   dom.postDetailSection.classList.remove("hidden");
+  dom.postDetailSection.classList.add("active");
   updateBackLink();
   setActiveNav("blog");
   const commentsMount = document.getElementById("comments");
