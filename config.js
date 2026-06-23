@@ -6,12 +6,12 @@
  * ===================================================================== */
 window.SITE_CONFIG = {
   /* 浏览器标签页标题 */
-  title: "Lux Log",
+  title: "Lucks' Space",
 
   /* 左上角品牌标识 */
   brand: {
-    mark: "Lux", // 图标里的文字
-    text: "Lux Log", // 站点名称
+    mark: "Lucks", // 图标里的文字
+    text: "Lucks' Space", // 站点名称
   },
 
   /* ---------------------------------------------------------------
@@ -31,8 +31,8 @@ window.SITE_CONFIG = {
   /* 首屏 Hero 区 */
   hero: {
     eyebrow: "Personal Homepage / Blog",
-    heading: "Welcome to LuxLog",
-    text: "这是 Luxu 的个人主页，分享一些有趣的东西（现在看来一些东西已经不有趣了，特指“疲于应付”系列。我的邮箱：231250073@smail.nju.edu.cn，欢迎大家交流想法。",
+    heading: "Welcome to Lucks Space, may the lucks be with you forever!",
+    
     primaryText: "开始阅读",
     primaryHref: "#writing",
     secondaryText: "联系我",
