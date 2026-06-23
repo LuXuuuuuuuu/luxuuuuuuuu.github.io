@@ -54,8 +54,8 @@ a {
 
 .page-shell {
   display: grid;
-  grid-template-columns: 260px minmax(0, 1fr);
-  gap: 40px;
+  grid-template-columns: 148px minmax(0, 1fr);
+  gap: 28px;
   width: var(--content-width);
   margin: 0 auto;
   padding: 28px 0 64px;
@@ -63,12 +63,14 @@ a {
 
 .site-rail {
   position: sticky;
-  top: 22px;
+  top: 18px;
   align-self: start;
   display: flex;
   flex-direction: column;
-  gap: 22px;
-  padding: 24px;
+  gap: 12px;
+  width: 148px;
+  min-height: 148px;
+  padding: 14px;
   border: 1px solid var(--line);
   background: var(--panel);
   backdrop-filter: blur(16px);
@@ -76,22 +78,23 @@ a {
 }
 
 .brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
   font-weight: 700;
 }
 
 .brand-mark {
   display: grid;
   place-items: center;
-  min-width: 46px;
-  height: 46px;
-  padding: 0 10px;
+  width: 42px;
+  height: 42px;
+  padding: 0;
   background: var(--ink);
   color: var(--bg);
   font-family: "Georgia", "Times New Roman", serif;
-  font-size: 1rem;
+  font-size: 0.95rem;
   letter-spacing: 0.05em;
 }
 
@@ -105,16 +108,15 @@ a {
   font-family: "Georgia", "Palatino Linotype", serif;
 }
 
-.rail-intro {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.95rem;
+.brand-text {
+  font-size: 0.8rem;
+  line-height: 1.15;
 }
 
 .site-nav {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 7px;
 }
 
 .nav-link {
@@ -122,9 +124,9 @@ a {
   display: inline-flex;
   align-items: center;
   width: fit-content;
-  padding: 4px 0;
+  padding: 2px 0;
   color: var(--muted);
-  font-size: 1rem;
+  font-size: 0.92rem;
   transition: color 160ms ease;
 }
 
@@ -162,12 +164,12 @@ a {
 .theme-toggle {
   display: grid;
   place-items: center;
-  width: 38px;
-  height: 38px;
+  width: 34px;
+  height: 34px;
   border: 1px solid var(--line);
   background: transparent;
   color: var(--ink);
-  font-size: 1rem;
+  font-size: 0.95rem;
   cursor: pointer;
   transition: border-color 180ms ease, color 180ms ease, transform 180ms ease;
 }
@@ -803,6 +805,8 @@ main {
 
   .site-rail {
     position: static;
+    width: auto;
+    min-height: 0;
     gap: 16px;
   }
 

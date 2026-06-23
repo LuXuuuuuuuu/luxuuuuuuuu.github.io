@@ -208,7 +208,7 @@ function parseFrontmatter(text) {
 /* ---------------------------------------------------------------------
  *  状态与 DOM 引用
  * ------------------------------------------------------------------- */
-const state = { tag: "All", query: "", posts: [] };
+const state = { tag: "All", query: "", posts: [], lastView: "home" };
 
 const dom = {
   postList: document.getElementById("post-list"),
@@ -218,6 +218,7 @@ const dom = {
   searchInput: document.getElementById("search-input"),
   postDetail: document.getElementById("post-detail"),
   postDetailSection: document.getElementById("post-detail-section"),
+  backLink: document.querySelector(".back-link"),
   views: Array.from(document.querySelectorAll(".view[data-view]")),
   navLinks: Array.from(document.querySelectorAll(".nav-link[data-view]")),
 };
@@ -426,8 +427,8 @@ function initSearch() {
 
 function getViewFromHash() {
   const hash = window.location.hash.replace(/^#/, "");
-  if (hash === "about" || hash === "blog" || hash === "categories") return hash;
-  return "about";
+  if (hash === "home" || hash === "about" || hash === "blog") return hash;
+  return "home";
 }
 
 function setActiveNav(view) {
@@ -441,7 +442,16 @@ function showView(view) {
     section.classList.toggle("active", section.dataset.view === view);
   });
   dom.postDetailSection.classList.add("hidden");
+  state.lastView = view;
   setActiveNav(view);
+}
+
+function updateBackLink() {
+  if (!dom.backLink) return;
+  const view = state.lastView || "home";
+  const text = view === "blog" ? "← 返回文章列表" : "← 返回首页目录";
+  dom.backLink.setAttribute("href", `#${view}`);
+  dom.backLink.textContent = text;
 }
 
 /* ---------------------------------------------------------------------
@@ -461,6 +471,7 @@ function renderPostDetailByHash() {
 
   dom.views.forEach((section) => section.classList.remove("active"));
   dom.postDetailSection.classList.remove("hidden");
+  updateBackLink();
   setActiveNav("blog");
   const commentsMount = document.getElementById("comments");
 

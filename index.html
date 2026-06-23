@@ -13,15 +13,14 @@
   <body>
     <div class="page-shell">
       <aside class="site-rail">
-        <a class="brand" href="#about" aria-label="首页">
+        <a class="brand" href="#home" aria-label="首页">
           <span class="brand-mark" id="brand-mark">LX</span>
-          <span class="brand-text" id="brand-text">Luxu Notes</span>
+          <span class="brand-text" id="brand-text">Lux Log</span>
         </a>
-        <p class="rail-intro">Personal site, blog, and study notes.</p>
         <nav class="site-nav" aria-label="主导航">
+          <a class="nav-link" data-view="home" href="#home">Home</a>
           <a class="nav-link" data-view="about" href="#about">About</a>
           <a class="nav-link" data-view="blog" href="#blog">Blog</a>
-          <a class="nav-link" data-view="categories" href="#categories">Categories</a>
         </nav>
         <div class="rail-actions">
           <button
@@ -37,12 +36,23 @@
 
       <div class="content-shell">
         <main id="top">
+          <section class="view" id="view-home" data-view="home">
+            <div class="view-header">
+              <p class="eyebrow">Home</p>
+              <h1>从分类进入内容，而不是从混乱进入页面。</h1>
+              <p class="view-intro">
+                首页直接展示按标签整理后的内容目录，先看结构，再点文章。
+              </p>
+            </div>
+            <div class="category-list" id="category-list"></div>
+          </section>
+
           <section class="view" id="view-about" data-view="about">
             <div class="view-header">
               <p class="eyebrow">About</p>
-              <h1>简洁一点，先把人和内容说清楚。</h1>
+              <h1>先介绍人，再介绍站点。</h1>
               <p class="view-intro">
-                这里放个人介绍、站点概况和联系方式，不再和文章列表混在一起。
+                这里单独放个人简介、站点概况和联系方式，不和文章目录混排。
               </p>
             </div>
 
@@ -92,7 +102,7 @@
             <div class="view-header compact">
               <div>
                 <p class="eyebrow">Blog</p>
-                <h1>把文章当主角。</h1>
+                <h1>按时间看全部文章。</h1>
               </div>
               <div class="tag-filter" id="tag-filter" aria-label="文章标签过滤"></div>
             </div>
@@ -110,18 +120,6 @@
             <div class="featured-post" id="featured-post"></div>
             <div class="post-grid" id="post-list"></div>
           </section>
-
-          <section class="view" id="view-categories" data-view="categories">
-            <div class="view-header">
-              <p class="eyebrow">Categories</p>
-              <h1>按主题读，不按时间翻。</h1>
-              <p class="view-intro">
-                这里把现有文章按标签聚合，减少首页的信息噪音。
-              </p>
-            </div>
-            <div class="category-list" id="category-list"></div>
-          </section>
-
           <section class="view post-detail" id="post-detail-section">
             <a class="back-link" href="#blog">← 返回文章列表</a>
             <article class="post-article" id="post-detail"></article>
