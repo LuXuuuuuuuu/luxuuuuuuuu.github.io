@@ -44,12 +44,26 @@ window.SITE_CONFIG = {
     "分享一些生活趣事"
   ],
 
+  /* ---------------------------------------------------------------
+   *  关于（导航栏“关于”点进来的个人简介）
+   *  - photo：照片路径，先用现有图占位，换成你自己的照片即可
+   *    （把照片放进 assets/ 后，把下面路径改成 assets/你的文件名）
+   *    留空 ("") 会显示一个“照片位”占位框
+   *  - bio：个人简介正文，支持换行（直接在引号里敲回车，或用 \n）
+   * --------------------------------------------------------------- */
+  about: {
+    photo: "assets/self.jpg",
+    bio:"我叫芦旭，NJUSE 23级本科生，在这里分享一些有趣的东西（目前看来有些内容已经不有趣了，特指“疲于应付”系列）",
+  },
+
   /* 联系方式（label + href + icon，可增删；icon 可选 github / email / zhihu） */
   contact: {
     intro: "欢迎通过下面任意方式找到我。",
     links: [
       { label: "Email", href: "mailto:231250073@smail.nju.edu.cn", icon: "email" },
       { label: "GitHub", href: "https://github.com/LuXuuuuuuuu", icon: "github" },
+      // ↓ 把下面的 your_username 换成你的 Instagram 用户名
+      { label: "Instagram", href: "https://www.instagram.com/luxu051109", icon: "instagram" },
       { label: "知乎", href: "https://www.zhihu.com/people/abc-46-6-42", image: "assets/zhihu.jpg" },
     ],
   },
@@ -74,15 +88,20 @@ window.SITE_CONFIG = {
   },
 
   /* ---------------------------------------------------------------
-   *  访客统计（不蒜子 busuanzi，零配置）
-   *  - enabled 设为 false 可关闭
-   *  - 显示在首页“总访问量 / 访客数”两个数字处
-   *  - 这是免费公共服务，偶尔会抽风导致数字不显示，属正常现象
+   *  访客统计（基于免费计数 API：Abacus，无需注册）
+   *  - enabled 设为 false 可关闭，显示在底部“总访问量 / 访客数”
+   *  - 和原来的 busuanzi 不同，这里刷新页面【不会】重复 +1：
+   *      · 总访问量(pv)：同一浏览器【每天】只 +1 一次
+   *      · 访客数(uv)：同一浏览器【一辈子】只 +1 一次（清掉浏览器数据会重新算）
+   *  - namespace 是你这个站点的“命名空间”，保持唯一即可（别和别人重名）
+   *  - 数字是从 0 重新开始统计的（旧的 busuanzi 数字本来也读不出来）
    * --------------------------------------------------------------- */
   stats: {
     enabled: true,
-    // 如官方源加载不出来，可换成镜像，例如：
-    // script: "https://cdn.jsdelivr.net/gh/aoki-marika/busuanzi@latest/busuanzi.pure.mini.js",
+    api: "https://abacus.jasoncameron.dev",
+    namespace: "luxuuuuuuuu-github-io",
+    pvKey: "site-pv",
+    uvKey: "site-uv",
   },
 
   /* 页脚 */

@@ -19,6 +19,7 @@
         </a>
         <nav class="site-nav" aria-label="主导航">
           <a href="#writing">博客</a>
+          <a href="#about">关于</a>
           <a href="#contact">联系</a>
           <button
             class="theme-toggle"
@@ -57,19 +58,15 @@
           </aside>
         </section>
 
-        <section class="metrics reveal delay-2" aria-label="站点概览">
-          <article>
-            <span class="metric-value" id="post-count">0</span>
-            <span class="metric-label">文章</span>
-          </article>
-          <article>
-            <span class="metric-value" id="busuanzi_value_site_pv">…</span>
-            <span class="metric-label">总访问量</span>
-          </article>
-          <article>
-            <span class="metric-value" id="busuanzi_value_site_uv">…</span>
-            <span class="metric-label">访客数</span>
-          </article>
+        <section class="section reveal" id="about">
+          <div class="section-heading">
+            <p class="eyebrow">About</p>
+            <h2>关于</h2>
+          </div>
+          <div class="about-card card">
+            <div class="about-photo empty" id="about-photo">照片位</div>
+            <div class="about-bio" id="about-bio"></div>
+          </div>
         </section>
 
         <section class="section reveal" id="writing">
@@ -110,6 +107,21 @@
             <p id="contact-intro"></p>
             <div class="contact-links" id="contact-links"></div>
           </div>
+        </section>
+
+        <section class="metrics reveal" aria-label="站点概览">
+          <article>
+            <span class="metric-value" id="post-count">0</span>
+            <span class="metric-label">文章</span>
+          </article>
+          <article>
+            <span class="metric-value" id="stat-pv">…</span>
+            <span class="metric-label">总访问量</span>
+          </article>
+          <article>
+            <span class="metric-value" id="stat-uv">…</span>
+            <span class="metric-label">访客数</span>
+          </article>
         </section>
       </main>
 

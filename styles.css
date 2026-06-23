@@ -9,7 +9,6 @@
   --accent: #c95c2f;
   --accent-dark: #a24722;
   --code-bg: rgba(32, 51, 47, 0.07);
-  --grid-line: rgba(32, 51, 47, 0.025);
   --content-width: min(940px, calc(100vw - 40px));
 }
 
@@ -22,7 +21,6 @@ html[data-theme="dark"] {
   --accent: #e3804f;
   --accent-dark: #f0a274;
   --code-bg: rgba(220, 232, 228, 0.08);
-  --grid-line: rgba(220, 232, 228, 0.035);
 }
 
 * {
@@ -43,18 +41,6 @@ body {
   font-family: "Aptos", "Segoe UI Variable", "Trebuchet MS", sans-serif;
   line-height: 1.7;
   transition: background-color 240ms ease, color 240ms ease;
-}
-
-body::before {
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  background-image:
-    linear-gradient(var(--grid-line) 1px, transparent 1px),
-    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
-  background-size: 30px 30px;
-  content: "";
-  pointer-events: none;
 }
 
 a {
@@ -235,7 +221,7 @@ a {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0;
-  margin: 0 0 8px;
+  margin: 56px 0 8px;
   border-top: 1px solid var(--line);
 }
 
@@ -281,6 +267,41 @@ a {
 
 .about-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* ---------------- About ---------------- */
+.about-card {
+  display: grid;
+  grid-template-columns: minmax(0, 240px) minmax(0, 1fr);
+  gap: 34px;
+  align-items: start;
+  padding: 26px 0 0;
+  border: none;
+  border-top: 1px solid var(--line);
+  background: none;
+}
+
+.about-photo {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid var(--line);
+}
+
+.about-photo.empty {
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  background: var(--code-bg);
+}
+
+.about-bio {
+  color: var(--body-text);
+  font-size: 1.05rem;
+  white-space: pre-line;
 }
 
 /* 卡片：去掉边框/背景/阴影/圆角，仅用顶部细线分隔 */
@@ -731,11 +752,16 @@ a {
   .hero,
   .featured-layout,
   .about-grid,
+  .about-card,
   .post-grid,
   .project-grid,
   .metrics,
   .contact-card {
     grid-template-columns: 1fr;
+  }
+
+  .about-photo {
+    max-width: 280px;
   }
 
   .hero {
