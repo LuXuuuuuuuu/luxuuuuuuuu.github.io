@@ -1,7 +1,7 @@
 ---
 title: 离散数学 思维与挑战
 date: 2026-06-18
-tags: 读书, 离散数学
+tags: 回忆与思考
 excerpt: Zsir 新书《离散数学：思维与挑战》
 cover:
 ---
