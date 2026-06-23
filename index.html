@@ -12,15 +12,18 @@
   </head>
   <body>
     <div class="page-shell">
-      <header class="site-header">
-        <a class="brand" href="#top" aria-label="首页">
+      <aside class="site-rail">
+        <a class="brand" href="#about" aria-label="首页">
           <span class="brand-mark" id="brand-mark">LX</span>
           <span class="brand-text" id="brand-text">Luxu Notes</span>
         </a>
+        <p class="rail-intro">Personal site, blog, and study notes.</p>
         <nav class="site-nav" aria-label="主导航">
-          <a href="#writing">博客</a>
-          <a href="#about">关于</a>
-          <a href="#contact">联系</a>
+          <a class="nav-link" data-view="about" href="#about">About</a>
+          <a class="nav-link" data-view="blog" href="#blog">Blog</a>
+          <a class="nav-link" data-view="categories" href="#categories">Categories</a>
+        </nav>
+        <div class="rail-actions">
           <button
             class="theme-toggle"
             id="theme-toggle"
@@ -29,106 +32,108 @@
           >
             ☾
           </button>
-        </nav>
-      </header>
+        </div>
+      </aside>
 
-      <main id="top">
-        <section class="hero reveal">
-          <div class="hero-copy">
-            <p class="eyebrow" id="hero-eyebrow">Personal Homepage / Blog</p>
-            <h1 id="hero-heading">把思考和成长轨迹放在同一个地方。</h1>
-            <p class="hero-text" id="hero-text">
-              这是 Luxu 的个人站点。记录随笔与持续学习。
-            </p>
-            <div class="hero-actions">
-              <a class="button button-primary" id="hero-primary" href="#writing"
-                >开始阅读</a
-              >
-              <a
-                class="button button-secondary"
-                id="hero-secondary"
-                href="#contact"
-                >联系我</a
-              >
+      <div class="content-shell">
+        <main id="top">
+          <section class="view" id="view-about" data-view="about">
+            <div class="view-header">
+              <p class="eyebrow">About</p>
+              <h1>简洁一点，先把人和内容说清楚。</h1>
+              <p class="view-intro">
+                这里放个人介绍、站点概况和联系方式，不再和文章列表混在一起。
+              </p>
             </div>
-          </div>
-          <aside class="hero-panel reveal delay-1">
-            <p class="panel-label">Now</p>
-            <ul class="status-list" id="now-list"></ul>
-          </aside>
-        </section>
 
-        <section class="section reveal" id="about">
-          <div class="section-heading">
-            <p class="eyebrow">About</p>
-            <h2>关于</h2>
-          </div>
-          <div class="about-card card">
-            <div class="about-photo empty" id="about-photo">照片位</div>
-            <div class="about-bio" id="about-bio"></div>
-          </div>
-        </section>
+            <div class="about-layout">
+              <div class="about-card">
+                <div class="about-photo empty" id="about-photo">照片位</div>
+                <div class="about-copy">
+                  <div class="about-bio" id="about-bio"></div>
+                </div>
+              </div>
 
-        <section class="section reveal" id="writing">
-          <div class="section-heading split-heading">
-            <div>
-              <p class="eyebrow">Writing</p>
-              <h2>博客</h2>
+              <div class="about-side">
+                <div class="stat-cards" aria-label="站点概览">
+                  <article class="stat-card">
+                    <span class="stat-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M1.5 12S5 5 12 5s10.5 7 10.5 7-3.5 7-10.5 7S1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3.2"/></svg>
+                    </span>
+                    <span class="stat-value" id="stat-pv">…</span>
+                    <span class="stat-label">访问量</span>
+                  </article>
+                  <article class="stat-card">
+                    <span class="stat-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7.5" r="3.7"/><path d="M4.5 20.5a7.5 7.5 0 0 1 15 0"/></svg>
+                    </span>
+                    <span class="stat-value" id="stat-uv">…</span>
+                    <span class="stat-label">访客量</span>
+                  </article>
+                  <article class="stat-card">
+                    <span class="stat-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3.5h8l4 4v13H6z"/><path d="M14 3.5v4h4"/><path d="M9 12h6M9 15.5h6"/></svg>
+                    </span>
+                    <span class="stat-value" id="post-count">0</span>
+                    <span class="stat-label">文章</span>
+                  </article>
+                </div>
+
+                <div class="contact-block">
+                  <p class="eyebrow">Contact</p>
+                  <p id="contact-intro"></p>
+                  <div class="contact-links" id="contact-links"></div>
+                </div>
+              </div>
             </div>
-            <div class="tag-filter" id="tag-filter" aria-label="文章标签过滤"></div>
-          </div>
+          </section>
 
-          <div class="writing-toolbar">
-            <input
-              id="search-input"
-              class="search-input"
-              type="search"
-              placeholder="搜索文章（标题 / 摘要 / 标签 / 正文）…"
-              aria-label="搜索文章"
-            />
-          </div>
+          <section class="view" id="view-blog" data-view="blog">
+            <div class="view-header compact">
+              <div>
+                <p class="eyebrow">Blog</p>
+                <h1>把文章当主角。</h1>
+              </div>
+              <div class="tag-filter" id="tag-filter" aria-label="文章标签过滤"></div>
+            </div>
 
-          <div class="featured-post card" id="featured-post"></div>
-          <div class="post-grid" id="post-list"></div>
-        </section>
+            <div class="writing-toolbar">
+              <input
+                id="search-input"
+                class="search-input"
+                type="search"
+                placeholder="搜索文章标题、摘要、标签或正文..."
+                aria-label="搜索文章"
+              />
+            </div>
 
-        <section class="section post-detail hidden" id="post-detail-section">
-          <a class="back-link" href="#writing">← 返回文章列表</a>
-          <article class="post-article card" id="post-detail"></article>
-          <section class="comments" id="comments" aria-label="评论"></section>
-        </section>
+            <div class="featured-post" id="featured-post"></div>
+            <div class="post-grid" id="post-list"></div>
+          </section>
 
-        <section class="section reveal" id="contact">
-          <div class="section-heading">
-            <p class="eyebrow">Contact</p>
-            <h2>联系</h2>
-          </div>
-          <div class="contact-card card">
-            <p id="contact-intro"></p>
-            <div class="contact-links" id="contact-links"></div>
-          </div>
-        </section>
+          <section class="view" id="view-categories" data-view="categories">
+            <div class="view-header">
+              <p class="eyebrow">Categories</p>
+              <h1>按主题读，不按时间翻。</h1>
+              <p class="view-intro">
+                这里把现有文章按标签聚合，减少首页的信息噪音。
+              </p>
+            </div>
+            <div class="category-list" id="category-list"></div>
+          </section>
 
-        <section class="metrics reveal" aria-label="站点概览">
-          <article>
-            <span class="metric-value" id="post-count">0</span>
-            <span class="metric-label">文章</span>
-          </article>
-          <article>
-            <span class="metric-value" id="stat-pv">…</span>
-            <span class="metric-label">总访问量</span>
-          </article>
-          <article>
-            <span class="metric-value" id="stat-uv">…</span>
-            <span class="metric-label">访客数</span>
-          </article>
-        </section>
-      </main>
+          <section class="view post-detail" id="post-detail-section">
+            <a class="back-link" href="#blog">← 返回文章列表</a>
+            <article class="post-article" id="post-detail"></article>
+            <section class="comments" id="comments" aria-label="评论"></section>
+          </section>
+        </main>
 
-      <footer class="site-footer">
-        <p>© <span id="current-year"></span> <span id="footer-text">Luxu Notes</span></p>
-        <p>Built for <code>luxuuuuuuuu.github.io</code>.</p>
-      </footer>
+        <footer class="site-footer">
+          <p>© <span id="current-year"></span> <span id="footer-text">Luxu Notes</span></p>
+          <p>Built for <code>luxuuuuuuuu.github.io</code>.</p>
+        </footer>
+      </div>
     </div>
 
     <button class="back-to-top" id="back-to-top" type="button" aria-label="回到顶部">
