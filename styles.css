@@ -256,17 +256,18 @@ main {
 }
 
 .about-card {
-  display: grid;
-  grid-template-columns: minmax(220px, 280px) minmax(0, 1fr);
-  gap: 28px;
   padding: 28px;
 }
 
 .about-photo {
-  width: 100%;
+  float: left;
+  width: clamp(180px, 32%, 250px);
   aspect-ratio: 3 / 4;
+  margin: 4px 24px 16px 0;
+  border-radius: 18px;
   background-size: cover;
   background-position: center;
+  box-shadow: var(--shadow);
 }
 
 .about-photo.empty {
@@ -283,9 +284,15 @@ main {
 }
 
 .about-bio {
+  display: flow-root;
+}
+
+.about-bio-text {
   color: var(--body-text);
   font-size: 1.06rem;
+  line-height: 1.9;
   white-space: pre-line;
+  overflow-wrap: anywhere;
 }
 
 .about-side {
@@ -843,12 +850,10 @@ main {
     padding-right: 18px;
   }
 
-  .about-card {
-    grid-template-columns: 1fr;
-  }
-
   .about-photo {
-    max-width: 240px;
+    float: none;
+    width: min(100%, 240px);
+    margin: 0 auto 18px;
   }
 
   .view-header.compact,
